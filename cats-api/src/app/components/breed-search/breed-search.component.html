@@ -1,7 +1,7 @@
 
 
 <form>
-	<select [(ngModel)]="showBreed()">
+	<select onSubmit="selectedCats">
 		<option *ngFor="let cat of cats" [value]="cat.id" >{{cat.name}}</option>
 	  </select>
 	<a class="add-btn" type="submit" text="Request a Cat">Search by Breed </a>
