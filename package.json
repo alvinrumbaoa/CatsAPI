@@ -1,0 +1,23 @@
+{
+  "name": "catsapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xenodochy23/CatsAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xenodochy23/CatsAPI/issues"
+  },
+  "homepage": "https://github.com/xenodochy23/CatsAPI#readme",
+  "dependencies": {
+    "@angular/cli": "^13.3.5",
+    "npm": "^8.10.0"
+  }
+}
