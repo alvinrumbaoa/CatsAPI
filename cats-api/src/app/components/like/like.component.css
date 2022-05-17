@@ -14,7 +14,6 @@
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .like-btn{
-	width: 100px;
 	background-color: rgb(93, 193, 93);
 	justify-content: center;
 	text-align: center;	
@@ -23,16 +22,14 @@
 	font-size: 20px;;
 	color: #ffffff;
 	border: 1px solid rgb(215, 215, 215);
-	width: 200px;
-	height: 55px;
-	padding: 10px	;
+	width: 125px;
+	height: 40px;
 	box-shadow: 2px 2px 2px black;
 	border-radius: 20px;
 	margin: 10px;
 }
 
 .dislike-btn{
-	width: 100px;
 	background-color: rgb(207, 92, 92);
 	justify-content: center;
 	align-items: center;
@@ -41,8 +38,8 @@
 	font-size: 20px;;
 	color: #ffffff;
 	border: 1px solid rgb(215, 215, 215);
-	width: 200px;
-	height: 55px;
+	width: 125px;
+	height: 40px;
 	box-shadow: 2px 2px 2px black;
 	border-radius: 20px;
 	margin: 10px;

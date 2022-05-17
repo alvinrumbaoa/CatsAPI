@@ -11,6 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {LikeComponent} from './components/like/like.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BreedSearchComponent } from './components/breed-search/breed-search.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
