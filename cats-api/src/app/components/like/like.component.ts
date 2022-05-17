@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 
 @Component({
@@ -17,10 +17,5 @@ export class LikeComponent{
 
  dislikeButton(){
   this.numberOfLikes === 0 ? 0 :  this.numberOfLikes--;
-
- 
 }
-
-
-
 }

@@ -1,26 +1,29 @@
 
 	<header>
-		<h1 class="title">Welcome to Cat Generators</h1>
-		<a  class="add-btn" (click)="getCats()">Show a Random Cat</a>
-		<a  class="add-btn" (click)="getCats()">Request a Cat</a>	
+		<img src="assets/cat-face.svg" alt="cat-logo" width="50" height="50"/>
+		<h1 class="title">Friendly Cat Generator</h1>
+		<button  class="add-btn" (click)="getCats()">Show a Random Cat</button>
+		<button  class="add-btn" (click)="getCats()">Request a Cat</button>	
 		
 	</header>
 	<main>
 		<div class="card-container">		
 			<div class="img-cats" *ngFor=" let cat of cats" >
 				<img class="img-cat" src="{{cat.url}}" alt={{cat.id}}  height="250"/>
-			</div>
-			<app-like></app-like>
+				<app-like></app-like>
 			
+			</div>
+		
 		</div>
 		<div class="card-container">
-			<select class="card-container"[(ngModel)]="selectedOption">
+			<select class="card-container" [(ngModel)]="selectedOption">
 				<option *ngFor="let cat of newCats" [value]="cat.image.url" >{{cat.name}}</option>
 			</select>
 			<button class="add-btn" (click)="searchById()">Search by Breed </button>
-			<div class="img-cats">
+			<div  class="img-cats">
 				<img  src="{{breedId}}" alt="Search by breed" height="200"/>
 			</div>
+		
 		</div>	
 	</main>
 
