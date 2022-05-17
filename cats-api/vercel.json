@@ -1,0 +1,13 @@
+{
+	"version": 2,
+	"public": true,
+	"name": "cats-api",
+	"rewrites": [
+	  { "source": "/(.*)", "destination": "/api" }
+	],
+	"functions": {
+	  "api/index.js": {
+		"includeFiles": "dist/cats-api/browser/**"
+	  }
+	}
+  }
