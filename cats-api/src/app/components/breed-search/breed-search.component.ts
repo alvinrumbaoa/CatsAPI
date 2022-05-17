@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import { response } from 'express';
 
 
 @Component({
@@ -19,10 +20,17 @@ export class BreedSearchComponent {
       this.http.get('https://api.thecatapi.com/v1/breeds/')
       .subscribe((cats: any) =>{
         this.cats = cats;
-      })
+      })  
       
     
   }
-  selectedCats: any;
+  selectedCats = this.cats[0];
+   submitSelectedCat(){
+    this.http.get('https://api.thecatapi.com/v1/breeds/')
+    .subscribe((cats: any) =>{
+      this.cats = cats;
+    })  
+   }
 
+ 
 }

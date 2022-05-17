@@ -2,12 +2,13 @@
 <div class="main">
 	<header>
 		<h1>Welcome to Cat Generators</h1>
-		<a  class="add-btn" (click)="getCats()">Show a Random Cat</a>
+		
 		<app-breed-search></app-breed-search>
 	</header>
 	<div class="container">	
+		<a  class="add-btn" (click)="getCats()">Show a Random Cat</a>
+		<a  class="add-btn" (click)="getCats()">Request a Cat</a>
 		<div *ngFor=" let cat of cats" >
-					<h2 class="cat-id">{{cat.id}}</h2>
 					<img class="img-cat" src="{{cat.url}}" alt={{cat.id}}  height="400"/>
 		</div>
 		<app-like></app-like>

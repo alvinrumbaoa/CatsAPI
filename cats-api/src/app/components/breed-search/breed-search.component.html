@@ -1,11 +1,14 @@
 
 
 <form>
-	<select onSubmit="selectedCats">
+	<select [(ngModel)]="selectedCats">
 		<option *ngFor="let cat of cats" [value]="cat.id" >{{cat.name}}</option>
 	  </select>
-	<a class="add-btn" type="submit" text="Request a Cat">Search by Breed </a>
+	<button class="add-btn" type="submit" text="Request a Cat" >Search by Breed </button>
 </form>
 
+<div>
 
+{{selectedCats | json}}
+</div>
 
