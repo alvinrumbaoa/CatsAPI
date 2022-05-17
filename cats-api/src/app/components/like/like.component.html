@@ -1,6 +1,6 @@
 
 <div class="container">
 	<p class="likes-text">{{numberOfLikes}} Like{{numberOfLikes > 1 ? "s" : ""}}</p> 
-	<button class="like-btn" type='button' href="javascript:void(0)" (click)="likeButton()" href="javascript:void(0);">Like</button>
-	<button class="dislike-btn" type="button"  href="javascript:void(0)"(click)="dislikeButton()" href="javascript:void(0);">Dislike</button>
+	<button class="like-btn" type='button'  (click)="likeButton()" >Like</button>
+	<button class="dislike-btn" type="button" (click)="dislikeButton()" >Dislike</button>
 </div>

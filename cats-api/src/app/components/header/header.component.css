@@ -1,26 +1,40 @@
-.card-container{
-	height: 700px;	
+.card-container{	
+	justify-content: center;
+	align-items: center;
+	justify-content: center;
 	direction: column;	
+	padding:10px;
 	background: rgba( 255, 255, 255, 0.25 );
 	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 	backdrop-filter: blur( 4px );
 	-webkit-backdrop-filter: blur( 4px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
+margin: 10px;
 }
 
 header{
 	display: flex;
 	justify-content: space-between;	
 	align-content: center;
-	padding: 50px;	
-	margin-bottom: 12px;
+	padding: 20px;	
 	width: 100%;
 }
-
+main{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	direction: row;	
+}
 .title{
-	
-
+	font-family: 'Roboto Mono', monospace;
+	font-size: 25px;
+	font-weight: 600;
+	text-shadow: 2px 2px 2px white;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	text-align: center;
 
 }
 .add-btn{
@@ -49,12 +63,11 @@ header{
 	justify-content: center;
 }
 
-.img-cat{
+.img-cats{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	align-content: center;
-	border-radius: 23px;
-	box-shadow: 12px 2px 5px black;
-	margin: 50px;
+	padding: 50px;
+
 }

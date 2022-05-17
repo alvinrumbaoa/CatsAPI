@@ -6,14 +6,16 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  loading: boolean = true
-  onLoad() {
-      this.loading = false;
-  }
+ 
   constructor(private http: HttpClient){
     this.getCats();
     this.showBreed();
     this.searchById();
+    
+  }
+  loading: boolean = true
+  onLoad() {
+      this.loading = false;
   }
     cats: any[] = [];
     newCats: any[] = [];
@@ -27,7 +29,7 @@ export class HeaderComponent {
   selectedOption: string = "";
   breedId: string = "";
   httpClient: any;
- 
+    
     showBreed(){
       this.http.get('https://api.thecatapi.com/v1/breeds/')
       .subscribe((newCats: any) =>{
@@ -37,9 +39,9 @@ export class HeaderComponent {
 
   searchById() {
     this.http.get('https://api.thecatapi.com/v1/breeds/search?breed_id='+ this.breedId)
-    .subscribe((newCats:any) =>{     
+    .subscribe((searchCats:any) =>{     
       this.breedId = this.selectedOption;
-      this.newCats = newCats;
+      
   })
 
   

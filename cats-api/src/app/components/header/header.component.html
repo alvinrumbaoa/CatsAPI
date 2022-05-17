@@ -3,17 +3,25 @@
 		<h1 class="title">Welcome to Cat Generators</h1>
 		<a  class="add-btn" (click)="getCats()">Show a Random Cat</a>
 		<a  class="add-btn" (click)="getCats()">Request a Cat</a>	
-		<select [(ngModel)]="selectedOption">
-			<option *ngFor="let cat of newCats" [value]="cat.image.url">{{cat.name}}</option>
-		  </select>
-		<button    (load)="onLoad()" (click)="searchById()">Search by Breed </button>	
+		
 	</header>
-	<div class="card-container">		
-		<div class="img-cats" *ngFor=" let cat of cats" >
-			<img class="img-cat" src="{{cat.url}}" alt={{cat.id}}  height="250"/>
+	<main>
+		<div class="card-container">		
+			<div class="img-cats" *ngFor=" let cat of cats" >
+				<img class="img-cat" src="{{cat.url}}" alt={{cat.id}}  height="250"/>
+			</div>
+			<app-like></app-like>
+			
 		</div>
-		<app-like></app-like>
+		<div class="card-container">
+			<select class="card-container"[(ngModel)]="selectedOption">
+				<option *ngFor="let cat of newCats" [value]="cat.image.url" >{{cat.name}}</option>
+			</select>
+			<button class="add-btn" (click)="searchById()">Search by Breed </button>
+			<div class="img-cats">
+				<img  src="{{breedId}}" alt="Search by breed" height="200"/>
+			</div>
+		</div>	
+	</main>
 
-	</div>
-	<img [hidden]="loading" class="search image" src="{{breedId}}" alt="cats"height="500"/>
-
+	
