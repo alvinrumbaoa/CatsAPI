@@ -11,13 +11,13 @@ export class HeaderComponent {
     this.getCats();
     this.showBreed();
     this.searchById();
-    
+    this.adoptCats();
   }
   loading: boolean = true
 
     cats: any[] = [];
     newCats: any[] = [];
-
+    results: any[] = [];
     
     getCats(){
       this.http.get('https://api.thecatapi.com/v1/images/search/')
@@ -42,8 +42,9 @@ export class HeaderComponent {
     .subscribe((searchCats:any) =>{     
       this.breedId = this.selectedOption;
       
-  })
-
-  
-}
+    })
+  }
+  adoptCats() {
+      this.results = this.cats;
+  }
 }

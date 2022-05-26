@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 	margin: 0 auto;
 	font-family: 'Roboto Mono', monospace;
+	
 }
 
 .container {
@@ -16,3 +17,13 @@
 	background: linear-gradient(#b3f0ff, #ffb3f0, #f0ffb3);
 }
 
+
+@media only screen and (max-width: 601px) {
+	.container{
+		width: 100%;
+		justify-content: center;
+		display: block;
+		direction: column;
+	}
+
+}
