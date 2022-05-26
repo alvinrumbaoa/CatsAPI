@@ -8,14 +8,12 @@ import { StorageService } from './storage.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
-import {LikeComponent} from './components/like/like.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LikeComponent,
-
   ],
   imports: [
     BrowserModule,

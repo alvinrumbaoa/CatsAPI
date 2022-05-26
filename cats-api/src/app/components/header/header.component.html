@@ -8,10 +8,15 @@
 		<div class="card-container">		
 			<div class="img-cats" *ngFor=" let cat of cats" >
 				<img class="img-cat" src="{{cat.url}}" alt={{cat.id}}  height="250"/>
-				<app-like></app-like>
-			</div>
+				
 			
-			<button  class="add-btn" (click)="adoptCats()">Request a Cat</button>	
+
+
+			</div>
+			<p class="likes-text">{{numberOfLikes}} Like{{numberOfLikes > 1 ? "s" : ""}}</p> 
+			<button class="like-btn" type='button' (click)="likeButton()" ><img src="assets/like.png" alt="like" width="20" height="20" /> Like</button>
+			<button class="dislike-btn" type="button" (click)="dislikeButton()" ><img src="assets/dislike.png" alt="dislike"width="20" height="20"/> Dislike</button>
+			<button  class="add-btn" (click)="adoptCat()">Request a Cat</button>	
 			
 		</div>
 		<div class="card-container">
@@ -20,9 +25,13 @@
 			</div>
 			<select class="card-selector" [(ngModel)]="selectedOption">
 				<option *ngFor="let cat of newCats" [value]="cat.image.url" >{{cat.name}}</option>
+				<button  class="add-btn" (click)="adoptCat()" >Request a Cat</button>	
 			</select>
 			<button class="add-btn" (click)="searchById()">Search by Breed </button>
-			<button  class="add-btn" (click)="adoptCats()">Request a Cat</button>	
+			<p class="likes-text">{{numberOfSearchLikes}} Like{{numberOfSearchLikes > 1 ? "s" : ""}}</p> 
+			<button class="like-btn" type='button' (click)="likeSearchButton()" ><img src="assets/like.png" alt="like" width="20" height="20" /> Like</button>
+			<button class="dislike-btn" type="button" (click)="dislikeSearchButton()" ><img src="assets/dislike.png" alt="dislike"width="20" height="20"/> Dislike</button>
+			<button  class="add-btn" (click)="adoptCat()">Request a Cat</button>	
 		
 		</div>	
 		
@@ -30,7 +39,6 @@
 
 	<div class="card-container">
 		<h1 class="title">Adopted Cats</h1>
-		<div class="img-cats" *ngFor=" let cat of cats" >
-			<img class="img-cat" src="{{cat.url}}" alt={{cat.id}}  height="250"/>
-		</div>
+		<img  src="{{imageURL}}" alt={{imageURL}} height="200"/>
+		<p class="likes-text">{{likes}} Like{{likes > 1 ? "s" : ""}}</p> 
 	</div>

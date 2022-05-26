@@ -76,6 +76,50 @@ border: 3px solid red;
 
 }
 
+.likes-text{
+	font-size: 20px;
+	font-weight: bold;
+	display: flex;
+	direction: column;	
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.like-btn{
+	background-color: rgb(93, 193, 93);
+	justify-content: center;
+	text-align: center;	
+	align-items: center;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 20px;;
+	color: #ffffff;
+	border: 1px solid rgb(215, 215, 215);
+	width: 125px;
+	height: 40px;
+	box-shadow: 2px 2px 2px black;
+	border-radius: 10px;
+	margin: 10px;
+
+}
+
+.dislike-btn{
+	background-color: rgb(207, 92, 92);
+	justify-content: center;
+	align-items: center;
+	text-align: center;	
+	font-family: 'Roboto Mono', monospace;
+	font-size: 20px;;
+	color: #ffffff;
+	border: 1px solid rgb(215, 215, 215);
+	width: 140px;
+	height: 40px;
+	box-shadow: 2px 2px 2px black;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+
 /* mobile */
 
 @media only screen and (max-width: 601px) {
@@ -114,5 +158,15 @@ border: 3px solid red;
 		display: flex;
 		height: 150px;	
 		direction: column;
+	}
+	.likes-text{
+		font-size: 10px;
+		
+		
+	}
+	.dislikes-text{
+		font-size: 10px;
+		
+		
 	}
 }
