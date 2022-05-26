@@ -6,12 +6,11 @@
 		<button  class="add-btn" (click)="getCats()">Request a Cat</button>	
 		
 	</header>
-	<main>
+	<div class="container">
 		<div class="card-container">		
 			<div class="img-cats" *ngFor=" let cat of cats" >
 				<img class="img-cat" src="{{cat.url}}" alt={{cat.id}}  height="250"/>
 				<app-like></app-like>
-			
 			</div>
 		
 		</div>
@@ -25,6 +24,6 @@
 			</div>
 		
 		</div>	
-	</main>
+	</div>
 
 	

@@ -1,7 +1,9 @@
+
+
+
 .card-container{	
 	justify-content: center;
 	align-items: center;
-	justify-content: center;
 	direction: column;	
 	padding:10px;
 	background: rgba( 255, 255, 255, 0.25 );
@@ -17,14 +19,16 @@ header{
 	display: flex;
 	justify-content: space-evenly;	
 	align-content: center;
+	direction: column;
 	padding: 20px;	
 	width: 100%;
 }
-main{
+.container{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	direction: row;	
+	direction: column;
+	
 }
 .title{
 	font-family: 'Roboto Mono', monospace;
@@ -69,4 +73,26 @@ main{
 	align-content: center;
 	padding: 50px;
 
+}
+
+/* mobile */
+
+@media only screen and (max-width: 601px) {
+	.container{
+		justify-content: center;
+		display: block;
+		direction: column;
+	}
+
+	.card-container{
+		display: flex;
+		width: 800px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	header{
+		display: block;
+		direction: column;
+	}
 }

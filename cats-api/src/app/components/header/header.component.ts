@@ -14,11 +14,11 @@ export class HeaderComponent {
     
   }
   loading: boolean = true
-  onLoad() {
-      this.loading = false;
-  }
+
     cats: any[] = [];
     newCats: any[] = [];
+
+    
     getCats(){
       this.http.get('https://api.thecatapi.com/v1/images/search/')
       .subscribe((cats: any) =>{
